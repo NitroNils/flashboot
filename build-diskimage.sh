@@ -49,7 +49,7 @@ cylinders=980          # "cylinders:"
 #cylinders=994          # "cylinders:"
 
 # 2GB cards
-#totalsize=4001760      # "total sectors:"
+#totalsize=3940000      # "total sectors:"
 #bytessec=512		# "bytes/sector:"
 #sectorstrack=63	# "sectors/track:"
 #sectorscylinder=1008  	# "sectors/cylinder:"
@@ -57,12 +57,12 @@ cylinders=980          # "cylinders:"
 #cylinders=994          # "cylinders:"
 
 # 4GB cards
-#totalsize=8003520      # "total sectors:"
+#totalsize=8003520      	# "total sectors:"
 #bytessec=512		# "bytes/sector:"
-#sectorstrack=63	# "sectors/track:"
+#sectorstrack=63		# "sectors/track:"
 #sectorscylinder=1008  	# "sectors/cylinder:"
-#trackscylinder=16      # "tracks/cylinder:"
-#cylinders=994          # "cylinders:"
+#trackscylinder=16      	# "tracks/cylinder:"
+#cylinders=994          	# "cylinders:"
 
 
 # Don't start without a imagefile as a parameter
