@@ -1,4 +1,27 @@
 #!/bin/sh
+#
+# Instead of creating a diskimage it installs directly to the cf card
+
+askConfirmation() {
+  echo "All data while be wiped on device $DEVICE"
+  echo "Do you want to proceed?? [y]"
+  read CONFIRMATION
+
+  if [ -z ${CONFIRMATION} ]; then
+   echo "please provide y or n"
+   askConfirmation
+  fi
+
+  if [ "${CONFIRMATION}" == "n" ]; then
+    echo "Operation cancelled... exiting!"
+    exit 1
+  fi
+
+  if [ "${CONFIRMATION}" != "y" ]; then
+   echo "please provide y or n"
+   askConfirmation
+  fi
+}
 
 getDevice() {
   echo "Enter the cf card" 
@@ -9,9 +32,17 @@ getDevice() {
   fi
 }
 
+
 getDevice
+askConfirmation
 
 
+# Check if the confirmation was yes else exit directly
+if [ "${CONFIRMATION}" != "y" ]; then
+  exit 1
+fi
+
+echo "Start building cf-card ${DEVICE}"
 CWD=`pwd`
 WORKDIR=sandbox
 SRCDIR=${BSDSRCDIR:-/usr/src}
