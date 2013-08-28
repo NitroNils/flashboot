@@ -112,9 +112,4 @@ ${SUDO} rm -f ${TMPFILE}
 
 echo ""
 echo "And we are done..."
-echo "Run \"mountimage.sh $IMAGEFILE\" to add configuration and packages."
-echo "When you are done with the configuration, gzip the imagefile and move"
-echo "it to the system with a flashwriter."
-echo "Use \"gunzip -c image.gz | dd of=/dev/sd0c\" on unix to write to flash"
-echo "On Windows you can use http://m0n0.ch/wall/physdiskwrite.php"
-echo "Both these utilities allow the gzipped image to be used directly."
+echo "Run \"sudo mount -o async /dev/${DEVICE}a /mnt\" to add configuration and packages."
