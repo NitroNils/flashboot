@@ -241,6 +241,7 @@ COPY ${DESTDIR}/usr/sbin/mtree			usr/sbin/mtree
 #COPY ${DESTDIR}/usr/sbin/named			usr/sbin/named
 COPY ${DESTDIR}/usr/sbin/ndp			usr/sbin/ndp
 COPY ${DESTDIR}/usr/sbin/ntpd			usr/sbin/ntpd
+COPY ${DESTDIR}/usr/sbin/ntpctl			usr/sbin/ntpctl
 COPY ${DESTDIR}/usr/sbin/npppd			usr/sbin/npppd
 COPY ${DESTDIR}/usr/sbin/npppctl		usr/sbin/npppctl
 COPY ${DESTDIR}/usr/sbin/ospfd			usr/sbin/ospfd
