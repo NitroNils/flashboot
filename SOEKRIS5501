@@ -48,6 +48,7 @@ pseudo-device	pfsync		# pf sync if
 pseudo-device	pflow		# pflow export if
 pseudo-device	enc	1	# option IPSEC needs the encapsulation interface
 pseudo-device	vether		# virtual Ethernet interface
+pseudo-device   vxlan		# virtual extensible local area network tunnel interface
 
 pseudo-device	pty	16	# pseudo-terminals
 pseudo-device	systrace 1	# system call tracing device

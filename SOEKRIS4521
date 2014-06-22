@@ -62,6 +62,7 @@ pseudo-device	 ppp		# PPP
 pseudo-device	 tun		# network tunneling over tty
 pseudo-device	 vlan		# IEEE 802.1Q VLAN
 pseudo-device	 trunk		# Trunking support
+pseudo-device	 vxlan		# virtual extensible local area network tunnel interface
 
 # for IPv6
 #pseudo-device	faith	1	# IPv[46] tcp relay translation i/f
