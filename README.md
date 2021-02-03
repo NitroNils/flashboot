@@ -8,10 +8,10 @@ For most applications you don't have to compile it on you own,
 you just put the binary release on a flashcard and you're set (somewhat simplified).
 
 Flashboot is not OpenBSD and it's not a official port. We are using the word
-OpenBSD because we don't change any source code other then the scripts that
+OpenBSD because we don't change any source code other than the scripts that
 are buildning the ram disk kernel and some basic defaults configurations. The
 kernel and the userland is untouched but stripped to the minimum to make
-Flashboots fotprint as smal as possible.
+Flashboots footprint as small as possible.
 
 Don't turn to OpenBSD mailing list for support since this project is
 unofficial. Please submit bug reports via the
@@ -26,9 +26,9 @@ tools used to build the OpenBSD installation media.
 The system builds a ram disk kernel (bsd.gz) with a reasonably complete set of
 daemons and utilities. This file should be installed into the root directory
 of the boot device. Note that this infrastructure only builds the kernel
-image, it is beyond its scope to install it onto the flash device, or to
+image. It is beyond its scope to install it onto the flash device or to
 prepare the flash device for booting the kernel. If you are playing with this
-stuff, you should know how to do this anyway.
+stuff you should know how to do this anyway.
 
 When the flashboot kernel boots, it will attempt to mount the flash device as
 /flash and extract any tarball files matching /flash/*.tgz into the root
@@ -47,7 +47,7 @@ brought up as 192.168.0.1 and the console is available (login: "root"
 password: "password"). The intention is to make it easy to load a real config
 from a freshly imaged flash card.
 
-The assumed platform is a Soekris NET4501 (www.soekris.com), but is very
+The assumed platform is a Soekris NET4501 (www.soekris.com), but it is very
 easily changed by selecting a different kernel config and adjusting or
 renaming the initial-conf/hostname.sis0 file.
 
@@ -87,12 +87,12 @@ Here are the basic steps you need to take.
 5. Ensure that installboot has been run on the boot media
 
 First, make sure all building scripts has the execute bit set for you and all
-other (chmod ugo+x build-*).
+others (chmod ugo+x build-*).
 
 Next, edit release.sh and change SHORTREL and LONGREL to match the version you
 want to build. You should also change URLBASE to match a mirror near you.
 
-build-release will download, patch and build userland automatically
+build-release will download, patch and build userland automatically.
 
 This build can take a very long time. Make sure you run this in the 
 flashboot-directory and with sudo since the script needs to be able
@@ -123,7 +123,7 @@ The system supports customisation in three different ways.
 the release-dependent subdirectory (e.g.  /flash/5.3 for a 5.3 kernel) is
 automatically extracted to the ramdisk during boot. This is useful for small
 extensions or configuration that you can distribute in a single tgz-package.
-Files can also be added to the /flash/conf directory, they are then
+Files can also be added to the /flash/conf directory. They are then
 automatically copied (not extracted) to the respective location in the
 ramdisk during boot, e.g. /flash/conf/etc/myname will end up as /etc/myname
 when the system has booted.
